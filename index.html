@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> PIZZA </title>
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css"
+      integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/7871eebc0a.js"></script>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+<!--<![endif]-->
+    <link rel="stylesheet" href="./vendor/css/side-menu.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+  </head>
+  <body id="home">
+    <div id="layout">
+      <!-- Menu toggle -->
+      <a href="#menu" id="menuLink" class="menu-link">
+        <span> </span>
+      </a>
+
+      <div id="menu" style="padding-bottom: 50px;">
+        <div class="pure-menu">
+          <a class="pure-menu-heading" href="#">Customize Your Pizza</a>
+          <div class='customize-pizza-input-container' id="pizza-size">
+            <h6 id="pizza-size-header">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+              <i class="fa fa-angle-down hide-until-clicked" aria-hidden="true"></i>
+              <span class="pizza-input-header">  Size </span>
+              <i class="fa fa-info-circle sidebar-tooltip" aria-hidden="true" data-toggle="tooltip"
+                title="Personal pizza for $6.00, Medium pizza for $10.00, Large pizza for $14.00, XLarge pizza for $16.00" data-placement="right"></i>
+            </h6>
+            <div id="pizza-size-inputs" class="hide-until-clicked">
+              <div class="radio">
+                <label class="pizza-radio-label"><input class="pizza-radio-input pizza-input-size" id="init-pizza" type="radio" name='pizza-size' value="sm">Personal</label>
+              </div>
+              <div class="radio">
+                <label class="pizza-radio-label"><input class="pizza-radio-input pizza-input-size" type="radio" name='pizza-size' value="md">Medium</label>
+              </div>
+              <div class="radio">
+                <label class="pizza-radio-label"><input class="pizza-radio-input pizza-input-size" type="radio" name='pizza-size' value="lg">Large</label>
+              </div>
+              <div class="radio">
+                <label class="pizza-radio-label"><input class="pizza-radio-input pizza-input-size" type="radio" name='pizza-size' value="xl">X-Large</label>
+              </div>
+            </div>
+          </div>
+          <div class='customize-pizza-input-container'>
+            <h6 id="pizza-sauce-header">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+              <i class="fa fa-angle-down hide-until-clicked" aria-hidden="true"></i>
+              <span class="pizza-input-header"> Sauce </span>
+              <i class="fa fa-info-circle sidebar-tooltip" aria-hidden="true" data-toggle="tooltip" title="Choose any sauce you want on the house!" data-placement="right"></i>
+            </h6>
+            <div id="pizza-sauce-inputs" class="hide-until-clicked">
+              <div class="radio">
+                <label class="pizza-radio-label marinara"><input class="pizza-radio-input pizza-input-sauce" type="radio" name="sauce" value="marinara">Marinara</label>
+              </div>
+              <div class="radio">
+                <label class="pizza-radio-label white-sauce"><input class="pizza-radio-input pizza-input-sauce" type="radio" name="sauce" value="white">White</label>
+              </div>
+              <div class="radio">
+                <label class="pizza-radio-label barbeque"><input class="pizza-radio-input pizza-input-sauce" type="radio" name="sauce" value="bbq">Barbeque</label>
+              </div>
+              <div class="radio">
+                <label class="pizza-radio-label no-sauce"><input class="pizza-radio-input pizza-input-sauce" type="radio" name="sauce" value="none">None</label>
+              </div>
+            </div>
+          </div>
+          <div class='customize-pizza-input-container'>
+            <h6 id="pizza-cheese-header">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+              <i class="fa fa-angle-down hide-until-clicked" aria-hidden="true"></i>
+              <span class="pizza-input-header"> Cheese </span>
+              <i class="fa fa-info-circle sidebar-tooltip" aria-hidden="true" data-toggle="tooltip"
+                title="+$3.00 Extra Cheese for any size pizza" data-placement="right"></i>
+            </h6>
+            <div id="pizza-cheese-inputs" class="hide-until-clicked">
+              <div class="radio">
+                <label class="pizza-radio-label"><input class="pizza-radio-input pizza-input-cheese" type="radio" name="cheese" value="reg">Regular</label>
+              </div>
+              <div class="radio">
+                <label class="pizza-radio-label"><input class="pizza-radio-input pizza-input-cheese" type="radio" name="cheese" value="extra">Extra</label>
+              </div>
+              <div class="radio">
+                <label class="pizza-radio-label"><input class="pizza-radio-input pizza-input-cheese" type="radio" name="cheese" value="none">No Cheese</label>
+              </div>
+            </div>
+          </div>
+          <div class='customize-pizza-input-container'>
+            <h6 id="pizza-crust-header">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+              <i class="fa fa-angle-down hide-until-clicked" aria-hidden="true"></i>
+              <span class="pizza-input-header"> Crust </span>
+              <i class="fa fa-info-circle sidebar-tooltip" aria-hidden="true" data-toggle="tooltip"
+                title="+$3.00 for Cheese Stuffed Crust. All other crusts are complementary" data-placement="right"></i>
+            </h6>
+            <div id="pizza-crust-inputs" class="hide-until-clicked">
+              <div class="radio">
+                <label class="pizza-radio-label"><input class="pizza-radio-input pizza-input-crust" type="radio" name="crust" value="plain">Plain</label>
+              </div>
+              <div class="radio">
+                <label class="pizza-radio-label"><input class="pizza-radio-input pizza-input-crust" type="radio" name="crust" value="garlic">Garlic Butter</label>
+              </div>
+              <div class="radio">
+                <label class="pizza-radio-label"><input class="pizza-radio-input pizza-input-crust" type="radio" name="crust" value="cheese">Cheese Stuffed</label>
+              </div>
+              <div class="radio">
+                <label class="pizza-radio-label"><input class="pizza-radio-input pizza-input-crust" type="radio" name="crust" value="spicy">Spicy</label>
+              </div>
+              <div class="radio">
+                <label class="pizza-radio-label"><input class="pizza-radio-input pizza-input-crust" type="radio" name="crust" value="special">House Special</label>
+              </div>
+            </div>
+          </div>
+          <div class='customize-pizza-input-container'>
+            <h6 id="pizza-toppings-header">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+              <i class="fa fa-angle-down hide-until-clicked" aria-hidden="true"></i>
+              <span class="pizza-input-header"> Toppings </span>
+              <i class="fa fa-info-circle sidebar-tooltip" aria-hidden="true" data-toggle="tooltip"
+                title="+$1.00 each additional meat items beyond the first complementary meat item and +$1.00 each additional veggie items beyond the first complementary veggie item" data-placement="right"></i>
+            </h6>
+            <div id="pizza-toppings-inputs" class="hide-until-clicked">
+              <div id="pizza-toppings-meats-inputs"  class='toppings-input customize-pizza-input-container'>
+                <h6 class="toppings-header" style="color:red;"> Meat Items </h6>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input meat-topping-input" type="checkbox">Pepperoni</label>
+                </div>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input meat-topping-input" type="checkbox">Sausage</label>
+                </div>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input meat-topping-input" type="checkbox">Canadian Bacon</label>
+                </div>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input meat-topping-input" type="checkbox">Ground Beef</label>
+                </div>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input meat-topping-input" type="checkbox">Anchovy</label>
+                </div>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input meat-topping-input" type="checkbox">Chicken</label>
+                </div>
+              </div>
+              <div id="pizza-toppings-veggie-inputs" class='toppings-input customize-pizza-input-container'>
+                <h6 class="toppings-header" style="color:#0ef70e;"> Veggies Items </h6>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input veggie-topping-input" type="checkbox">Tomatoes</label>
+                </div>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input veggie-topping-input" type="checkbox">Onions</label>
+                </div>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input veggie-topping-input" type="checkbox">Olives</label>
+                </div>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input veggie-topping-input" type="checkbox">Green Peppers</label>
+                </div>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input veggie-topping-input" type="checkbox">Mushrooms</label>
+                </div>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input veggie-topping-input" type="checkbox">Pineapple</label>
+                </div>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input veggie-topping-input" type="checkbox">Spinach</label>
+                </div>
+                <div class="checkbox">
+                  <label class="pizza-checkbox-label"><input class="pizza-checkbox-input veggie-topping-input" type="checkbox">Jalapeno</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="main">
+        <div class="header">
+          <h1>Pizza All Day Everyday</h1>
+          <h5>Select the options to the left to begin customizing your awesome pizza</h5>
+        </div>
+
+        <div class="content">
+          <p id="no-pizza-size" class="text-center">
+            Please select a pizza size to begin building your pizza
+          </p>
+          <div class="pizza-details">
+            <div id="main-pizza" class="pizza-base">
+              <img src="./assets/images/cheese.png" id="cheese-img" class="cheese-overlay-img" />
+              <img src="./assets/images/extra-cheese.png" id="extra-cheese-img" class="cheese-overlay-img"/>
+            </div>
+            <hr />
+            <h5> Pizza Order </h5>
+            <ul class="list-group">
+              <li class="list-group-item" id="final-pizza-size">
+                <span class="total-description"> </span>
+                <span class="total-input-price"> </span>
+              </li>
+              <li class="list-group-item" id="final-price">
+                <span class="total-description bold-font"> Total Price:  </span>
+                <span class="total-price" id="total-price" > </span>
+              </li>
+            </ul>
+            <div class="pure-g" style="margin-top: 20px;">
+              <div class="pure-u-1 text-right">
+                <button type="submit" class="btn btn-success" id="checkout"> Checkout </button>
+              </div>
+            </div>
+
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+      integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+      integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="./vendor/js/ui.js"> </script>
+    <script src="./js/app.js"> </script>
+  </body>
+</html>

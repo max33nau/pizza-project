@@ -1,0 +1,157 @@
+#menu .pure-menu-heading {
+  background-color: #ec971f;
+}
+
+.content {
+  margin-top: 50px;
+}
+
+.pizza-details {
+  display: none;
+}
+
+.bold-font {
+  font-weight: bolder;
+}
+
+.pizza-base {
+  margin: 0 auto;
+  position: relative;
+  background-color: #f0e0c4;
+  border-radius: 90%;
+  border: 10px solid #edae6b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pizza-base img {
+  position: absolute;
+  max-width: 400px;
+  flex-shrink: 0;
+  display: none;
+  min-width: 100%;
+  min-height: 100%
+}
+
+.checkbox,
+.radio {
+  -webkit-user-select: none; /* Chrome, Opera, Safari */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+}
+
+
+
+.total-description {
+  width: 50%;
+  display: inline-block;
+}
+
+.total-input-price, .total-price {
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+}
+
+
+.tooltip-inner {
+  background-color: #ccc !important;
+  /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
+  color: #000;
+}
+
+.tooltip.bs-tether-element-attached-left .tooltip-inner::before, .tooltip.tooltip-right .tooltip-inner::before {
+  border-right-color: #ccc !important;
+}
+
+.customize-pizza-input-container {
+  margin-top: 20px;
+  color: white;
+}
+
+.hide-until-clicked {
+  display: none;
+}
+
+.customize-pizza-input-container h6 {
+  padding-left: 10px;
+  color: yellow;
+  cursor:pointer;
+}
+
+.customize-pizza-input-container .toppings-header {
+  padding-left: 20px;
+  color: white;
+  font-size: 12px;
+}
+
+.pizza-input-header {
+  display: inline-block;
+  margin-left: 5px;
+  min-width: 90px;
+}
+
+.pizza-checkbox-label {
+  width: 100%;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 40px;
+}
+
+.pizza-checkbox-label:hover {
+  background-color:  #ec971f;
+}
+
+.pizza-radio-label {
+  width: 100%;
+  cursor: pointer;
+  padding: 2px 20px;
+}
+
+.pizza-radio-label:hover {
+  background-color:  #ec971f;
+}
+
+.marinara {
+  color: red;
+}
+
+.marinara:hover {
+  color: white;
+  background-color: red;
+}
+
+.white-sauce:hover {
+  color:black;
+  background-color: white;
+}
+
+.barbeque {
+  color: #dc6865;
+}
+
+.barbeque:hover {
+  background-color: brown;
+  color: white;
+}
+
+.no-sauce {
+  color: orange;
+}
+
+.no-sauce:hover {
+  color:white;
+}
+
+
+.pizza-radio-input,
+.pizza-checkbox-input {
+  margin-right: 5px;
+}
+
+.pizza-checkbox-input {
+  vertical-align: middle;
+}
